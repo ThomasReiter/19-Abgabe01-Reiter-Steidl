@@ -1,23 +1,28 @@
-package at.fhj.iit;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
 	public static void main(String[] args) {
+		List testingList = Arrays.asList(1,2,3,4,5,6);
 		
-		Calculator calc = new CalculatorImpl();
 		
-		calc.add(20);	// currently highest number
-		calc.add(4);	// currently lowester number
-		calc.add(16);
 		
-		// add other integers
-		
-		// output lowest number 
-		
-		// output highest number
-		
-		// output sum of all numbers
 
+	}
+	
+	public int getMinimum(List testingList) {
+		return 0;
+		
+	}
+	public int getMaximum(List testingList) {
+		return 0;
+		
+	}
+	public List addValue(List testingList,int zugabe) {
+		
+		testingList.add(zugabe);
+		return testingList;
 	}
 
 }
