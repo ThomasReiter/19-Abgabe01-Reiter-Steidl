@@ -6,20 +6,31 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		List testingList = Arrays.asList(1,2,3,4,5,6);
+		List testingList = Arrays.asList(5,7,3,4,3,0);
 
+		int minimum = getMinimum(testingList);
+		System.out.println(minimum);
 	
 	}
 
-		    public int getMinimum(List testingList) {
-		        return 0;
+		    public static int getMinimum(List testingList) {
+		    	
+		    	int minimum = (int) testingList.get(0);
+		    	for (int i =1;i<testingList.size();i++) {
+		    		int tested = (int) testingList.get(i);	
+		    		if (minimum>tested) {
+		    			minimum = tested;
+		    		}
+		    	}
+		    	
+		    	return minimum;
 
 		    }
 		    public int getMaximum(List testingList) {
 		        return 0;
 
 		    }
-		    public List addValue(List testingList,int zugabe) {
+		    public static List addValue(List testingList,int zugabe) {
 
 		        testingList.add(zugabe);
 		        return testingList;
