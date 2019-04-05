@@ -92,6 +92,17 @@ public class Calculator {
 	    }
 	    	return maximum;
 	   }
+	 
+	 public int sum() {
+		int sum = 0;
+		
+		for(int i=0; i<testingList.size()-1; i++ ) {
+			sum+=testingList.get(i);
+		}
+		return sum;
+		 
+	 }
+	 
 	  public List<Integer> addValue(int zugabe) {
 
 	        testingList.add(zugabe);
