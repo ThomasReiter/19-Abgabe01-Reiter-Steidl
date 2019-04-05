@@ -6,14 +6,16 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		List testingList = Arrays.asList(5,7,3,4,3,0);
+		List<Integer> testingList = Arrays.asList(5,7,3,4,3,0);
 
 		int minimum = getMinimum(testingList);
+		System.out.println(minimum);
+		int maximum = getMaximum(testingList);
 		System.out.println(minimum);
 	
 	}
 
-		    public static int getMinimum(List testingList) {
+		    public static int getMinimum(List<Integer> testingList) {
 		    	
 		    	int minimum = (int) testingList.get(0);
 		    	for (int i =1;i<testingList.size();i++) {
@@ -26,11 +28,19 @@ public class Main {
 		    	return minimum;
 
 		    }
-		    public int getMaximum(List testingList) {
-		        return 0;
+		    public static int getMaximum(List<Integer> testingList) {
+		    	
+		    	int maximum = (int) testingList.get(0);
+		    	for (int i =1;i<testingList.size();i++) {
+		    		int tested = (int) testingList.get(i);	
+		    		if (maximum<tested) {
+		    			maximum = tested;
+		    		}
 
 		    }
-		    public static List addValue(List testingList,int zugabe) {
+				return maximum;
+		   }
+		    public static List<Integer> addValue(List<Integer> testingList,int zugabe) {
 
 		        testingList.add(zugabe);
 		        return testingList;
