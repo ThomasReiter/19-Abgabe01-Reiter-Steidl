@@ -1,6 +1,9 @@
 package at.fhj.iit;
 
-public interface Calculator {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Calculator {
 	
 	/**
 	 * Student 1
@@ -62,12 +65,39 @@ public interface Calculator {
 	 *
 	 */
 
-	int sum(); 
-	
-	int getMaximum();
+	static List<Integer> testingList = new ArrayList<>();
 
-	int getMinimum();
+	public int getMinimum() {
+		
+		int minimum = (int) testingList.get(0);
+		for (int i =1;i<testingList.size();i++) {
+			int tested = (int) testingList.get(i);	
+			if (minimum>tested) {
+				minimum = tested;
+			}
+		}
+		
+		return minimum;
 	
-	void addValue(int value);
+	}
+	 public int getMaximum() {
+	    	
+	    	int maximum = (int) testingList.get(0);
+	    	for (int i =1;i<testingList.size();i++) {
+	    		int tested = (int) testingList.get(i);	
+	    		if (maximum<tested) {
+	    			maximum = tested;
+	    		}
+
+	    }
+	    	return maximum;
+	   }
+	  public List<Integer> addValue(int zugabe) {
+
+	        testingList.add(zugabe);
+	        return testingList;
+	    }
+
 
 }
+
